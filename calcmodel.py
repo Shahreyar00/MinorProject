@@ -78,7 +78,7 @@ while True:
         x, y = lmList[8]
 
         # If clicked check which button and perform action
-        if length < 50 and delayCounter == 0:
+        if length < 45 and delayCounter == 0:
             for i, button in enumerate(buttonList):
                 if button.checkClick(x, y):
                     myValue = buttonListValues[int(i % 4)][int(i / 4)]  # get correct number
@@ -103,3 +103,6 @@ while True:
     cv2.imshow("Image", img)
     if key == ord('c'):
         myEquation = ''
+    
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break

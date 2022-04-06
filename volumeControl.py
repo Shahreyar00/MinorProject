@@ -2,7 +2,7 @@ import cv2 as cv
 import time 
 import numpy as np 
 import math 
-import htmodule2 as htm 
+import htmodule as htm 
 
 from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
@@ -53,7 +53,7 @@ while True:
 
 
         vol = np.interp(length, [20,60], [minVol, maxVol])
-        volBar = np.interp(length, [20,160], [400,150])
+        volBar = np.interp(length, [20,120], [400,150])
         volPer = np.interp(length, [20,160], [0,100])
         print(int(length), vol)
         volume.SetMasterVolumeLevel(vol, None)

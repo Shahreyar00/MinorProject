@@ -1,5 +1,5 @@
 import cv2 as cv 
-import htmodule2 as htm  
+import htmodule as htm  
 import os 
 import time 
 
